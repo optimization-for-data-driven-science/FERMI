@@ -20,6 +20,7 @@ Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | dp | :x: | :x:
 Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | :x: | eod | :x: | :x:
 Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | dp, eod | biased | :x:
 
+
 Where NB, Cont., Stoch, dp, eod, MI, and RC stand for non-binary, continuous, stochastic, demomgraphic parity, equalized odds, Mutual Information and Rényi Correlation respectively. 
 
 ## Dependencies
