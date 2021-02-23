@@ -11,6 +11,6 @@ where the first term represents the population risk (accuracy) and the second te
 To run the code for a binary classification problem with a binary sensitive attribute use the following command:  
 
 ```
-python Binary/senitive.py 
+python BinaryClassification/Binary_FERMI.py 
 ```
 
