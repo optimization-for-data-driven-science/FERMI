@@ -9,7 +9,7 @@ where the first term represents the population risk (accuracy) and the second te
 
 
 **Reference** | **NB Target** | **NB Attribute** | **NB both exp.** | **Cont. Target** | **Violation Notion** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
-:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:
+:-: | :-: | :-: | :-: | :-: | :-: | :-: | :
 Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :heavy_check_mark: | O(ε<sup>-4</sup>) (Stoch)
 Batch FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :x: | O(ε<sup>-4</sup>) (Batch)
 Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | dp, eod, MI | :heavy_check_mark: | :x:
@@ -23,6 +23,13 @@ Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_che
 Where NB, Cont., Stoch, dp, eod, MI, and RC stand for non-binary, continuous, stochastic, demomgraphic parity, equalized odds, Mutual Information and Rényi Correlation respectively. 
 
 ## Dependencies
+The following packages must be installed via Anaconda or pip before running the codes. Download and install **Python 3.x version** from [Python 3.x Version](https://www.python.org/downloads/):
+Then install the following packages via Conda or pip:
+* [Numpy](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
+* [Pandas](https://anaconda.org/conda-forge/matplotlib)
+* [Scikit learn](https://scikit-learn.org/stable/install.html)
+* [Matplotlib](https://matplotlib.org/stable/users/installing.html)
+* [PyTorch](https://pytorch.org/get-started/locally/)
 
 
 ## Binary Classification with Binary Sensitive Attribute 
