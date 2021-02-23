@@ -21,7 +21,6 @@ Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | :x: | eod | :x: | :x:
 Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | dp, eod | biased | :x:
 
 
-Where NB, Cont., Stoch, dp, eod, MI, and RC stand for non-binary, continuous, stochastic, demomgraphic parity, equalized odds, Mutual Information and Rényi Correlation respectively. 
 
 ## Dependencies
 The following packages must be installed via Anaconda or pip before running the codes. Download and install **Python 3.x version** from [Python 3.x Version](https://www.python.org/downloads/):
