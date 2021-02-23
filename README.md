@@ -9,13 +9,13 @@ where the first term represents the population risk (accuracy) and the second te
 
 
 **Reference** | **NB Target** | **NB Attribute** | **NB both exp.** | **Cont. Target** | **Violation Notion** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
---- | --- | --- | --- | --- | --- | --- | ---
+:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:
 Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :x:
 Batch FERMI | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x:
 Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x:
 Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x:
 Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x:
-Rezaei et al. [2020] | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:
+Rezaei et al. [2020] | :x: |  :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:
 Jiang et al. [2020] | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:
 Donini et al. [2018] | :x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:
 Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:
