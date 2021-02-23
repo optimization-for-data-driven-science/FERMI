@@ -22,16 +22,6 @@ Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_che
 
 
 
-## Dependencies
-The following packages must be installed via Anaconda or pip before running the codes. Download and install **Python 3.x version** from [Python 3.x Version](https://www.python.org/downloads/):
-Then install the following packages via Conda or pip:
-* [Numpy](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
-* [Pandas](https://anaconda.org/conda-forge/matplotlib)
-* [Scikit learn](https://scikit-learn.org/stable/install.html)
-* [Matplotlib](https://matplotlib.org/stable/users/installing.html)
-* [PyTorch](https://pytorch.org/get-started/locally/)
-
-
 ## Binary Classification with Binary Sensitive Attribute 
 To run the code for a binary classification problem with a binary sensitive attribute use the following command:  
 
