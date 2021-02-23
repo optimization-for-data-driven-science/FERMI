@@ -10,15 +10,15 @@ where the first term represents the population risk (accuracy) and the second te
 
 **Reference** | **NB Target** | **NB Attribute** | **NB both exp.** | **Cont. Target** | **Violation Notion** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
 :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:
-Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :x: | :x:
-Batch FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :x: | :x:
-Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | dp, eod, MI | :x: | :x:
-Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | dp, eod | :x: | :x:
-Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | dp, eod, RC | :x: | :x:
-Rezaei et al. [2020] | :x: |  :x: | :x: | :x: | dp, eod | :heavy_check_mark: | :x:
-Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | dp | :heavy_check_mark: | :heavy_check_mark:
-Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | :x: | eod | :heavy_check_mark: | :heavy_check_mark:
-Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | dp, eod | :heavy_check_mark: | :heavy_check_mark:
+Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :heavy_check_mark: | O(ε<sup>-4</sup>)
+Batch FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | dp, eod, MI, RC, ERMI | :x: | O(ε<sup>-4</sup>)
+Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | dp, eod, MI | :heavy_check_mark: | :x:
+Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | dp, eod | biased | :x:
+Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | dp, eod, RC | :x: | O(ε<sup>-4</sup>)
+Rezaei et al. [2020] | :x: |  :x: | :x: | :x: | dp, eod | :x: | :x:
+Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | dp | :x: | :x:
+Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | :x: | eod | :x: | :x:
+Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | dp, eod | biased | :x:
 
 ## Dependencies
 
