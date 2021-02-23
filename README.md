@@ -34,7 +34,7 @@ python BinaryClassification/Binary_FERMI.py
 
 
 ## Stochastic FERMI for Large-scale Neural Networks on Datasets with Multiple Sensitive Attributes
-The implementation of Algorithm 1 in , specialized to a 4-layer neural network on color mnist dataset can be found in NeuralNetworkMnist folder. You can run it on color mnist dataset via:
+The implementation of Algorithm 1 in [paper](https://www.google.com), specialized to a 4-layer neural network on color mnist dataset can be found in NeuralNetworkMnist folder. You can run it on color mnist dataset via:
 
 ```
 python NeuralNetworkMnist/code_cm.py 
