@@ -39,6 +39,12 @@ To run the code for a binary classification problem with a binary sensitive attr
 python BinaryClassification/Binary_FERMI.py 
 ```
 
+The above code updates the parameters of a logistic regression model via gradient descent algorithm. When the training dataset is large-scale, the implemented algorithm can be slow. Thus, we suggest to run the following code which updates the parameters using stochastic gradient descent. Note that, from a theoretical point of view the number of required iterations for FERMI (stochastic version) is not better than the deterministic algorithm, but the per-iteration cost is much smaller especially when smaller batches are chosen. 
+
+```
+python BinaryClassification/Stochastic_FERMI.py 
+```
+
 
 ## Stochastic FERMI for Large-scale Neural Networks on Datasets with Multiple Sensitive Attributes (Non-binary Labels and Sensitive Attributes)
 The implementation of Algorithm 1 in [paper](https://arxiv.org/abs/2102.12586), specialized to a 4-layer neural network on color mnist dataset can be found in NeuralNetworkMnist folder. You can run it on color mnist dataset via:
