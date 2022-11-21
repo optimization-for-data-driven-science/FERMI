@@ -31,19 +31,30 @@ Then install the following packages via Conda or pip:
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
 * [PyTorch](https://pytorch.org/get-started/locally/)
 
-
-## Binary Classification with Binary Sensitive Attribute 
-To run the code for a binary classification problem with a binary sensitive attribute use the following command:  
-
-```
-python BinaryClassification/Binary_FERMI.py 
-```
-
-The above code updates the parameters of a logistic regression model via gradient descent algorithm. When the training dataset is large-scale, the implemented algorithm can be slow. Thus, we suggest to run the following code which updates the parameters using stochastic gradient descent. Note that, from a theoretical point of view the number of required iterations for FERMI (stochastic version) is not better than the deterministic algorithm, but the per-iteration cost is much smaller especially when smaller batches are chosen. 
+## Install FERMI as a Python Package
+FERMI package is publicly available at [FERMI-ODDS](https://pypi.org/project/FERMI-ODDS/): You can install FERMI via pip using the following command:
 
 ```
-python BinaryClassification/Stochastic_FERMI.py 
+pip install FERMI-ODDS
 ```
+
+## Binary Classification with Binary Sensitive Attribute (Adult Dataset)
+To run the code for a binary classification problem with a binary sensitive attribute on the Adult dataset, run the following commands:
+
+```
+from FERMI import AdultDataset
+from FERMI import FERMIBinary
+
+AdultDataset.download_data()
+X_train, S_train, Y_train = AdultDataset.read_binary_adult(mode='train')
+X_test, S_test, Y_test = AdultDataset.read_binary_adult(mode='test')
+
+
+fermi_instance = FERMIBinary.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_test)
+FERMIBinary.FERMI_Logistic_Regression(fermi_instance)
+```
+
+The above code updates the parameters of a logistic regression model via stochastic gradient descent algorithm. FERMI_Logistic_Regression has multiple parameters including batch_size (default=64), initial epochs (default = 300, in this phase we learn the model without the fairness regularizer), epochs (default=1000, total number of epochs), etc. 
 
 
 ## Stochastic FERMI for Large-scale Neural Networks on Datasets with Multiple Sensitive Attributes (Non-binary Labels and Sensitive Attributes)
