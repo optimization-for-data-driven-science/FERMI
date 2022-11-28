@@ -1,5 +1,5 @@
 ## A Stochastic Optimization Framework for Fair Risk Minimization
-This repository is dedicated to the implementation of Fair Empirical Risk Minimization via Exponential Renyi Mutual Information(FERMI) algorithms proposed in [A Stochastic Optimization Framework for Fair Risk Minimization](https://arxiv.org/abs/2102.12586). FERMI provides the first ****stochastic**** algorithm with theroretical convergence guarantees to optimal points (tradeoff between accuracy and fairness) for promoting fairness in classification tasks. To balance the accuracy and fairness, our framework minimizes the following objective function:
+This repository presents the implementation of Fair Empirical Risk Minimization via Exponential Renyi Mutual Information (FERMI) proposed in [A Stochastic Optimization Framework for Fair Risk Minimization](https://arxiv.org/abs/2102.12586) paper. FERMI provides the first **stochastic** algorithm with theoretical convergence guarantees to optimal points (tradeoff between accuracy and fairness) for promoting fairness in classification tasks. To balance accuracy and fairness, our framework minimizes the following objective function:
 
 <div align='center'> 
 <img src="General_Framework.png" width="750" align='center'>
