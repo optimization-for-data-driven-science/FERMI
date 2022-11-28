@@ -1,5 +1,5 @@
-## Fair Empirical Risk Minimization Via Exponential Rényi Mutual Information
-This repository is dedicated to implementation of Fair Empirical Risk Minimization (FERMI) algorithms proposed in . FERMI provides the first ****stochastic**** algorithm with theroretical convergence guarantees for promoting fairness in classification tasks. To balance the accuracy and fairness, **fair risk minimization through exponential Rényi mutual information** framework minimizes the following objective function:
+## A Stochastic Optimization Framework for Fair Risk Minimization
+This repository is dedicated to the implementation of Fair Empirical Risk Minimization via Exponential Renyi Mutual Information(FERMI) algorithms proposed in [A Stochastic Optimization Framework for Fair Risk Minimization](https://arxiv.org/abs/2102.12586). FERMI provides the first ****stochastic**** algorithm with theroretical convergence guarantees to optimal points (tradeoff between accuracy and fairness) for promoting fairness in classification tasks. To balance the accuracy and fairness, our framework minimizes the following objective function:
 
 <div align='center'> 
 <img src="General_Framework.png" width="750" align='center'>
@@ -55,6 +55,22 @@ FERMIBinary.FERMI_Logistic_Regression(fermi_instance)
 ```
 
 The above code updates the parameters of a logistic regression model via stochastic gradient descent algorithm. FERMI_Logistic_Regression has multiple parameters including batch_size (default=64), initial epochs (default = 300, in this phase we learn the model without the fairness regularizer), epochs (default=1000, total number of epochs), etc. 
+
+## Non-Binary Fair Classification (Adult Dataset)
+To run the code for a classification problem with non-binary sensitive attribute on the Adult dataset, run the following commands:
+
+```
+from FERMI import AdultDataset
+from FERMI import FERMIBinary
+
+AdultDataset.download_data()
+X_train, S_train, Y_train = AdultDataset.read_non_binary_adult(mode='train')
+X_test, S_test, Y_test = AdultDataset.read_non_binary_adult(mode='test')
+
+fermi_instance = FERMIDiscrete.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_test)
+FERMIDiscrete.FERMI_Logistic_Regression(fermi_instance)
+```
+
 
 
 ## Stochastic FERMI for Large-scale Neural Networks on Datasets with Multiple Sensitive Attributes (Non-binary Labels and Sensitive Attributes)
