@@ -10,10 +10,10 @@ where the first term represents the population risk (accuracy) and the second te
 
 **Reference** | **NB Target** | **NB Attribute** | **NB Code** | **Beyond Logistic** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
 :-: | :-: | :-: | :-: | :-: | :-: | :-:
-Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark: | O(ε<sup>-4</sup>)
+Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark: | O(ε<sup>-4</sup>) (Stochastic)
 Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x:
 Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | biased | :x:
-Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :heavy_check_mark:
+Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | O(ε<sup>-4</sup>) (Batch)
 Rezaei et al. [2020] | :x: |  :x: | :x: | :x: | :x: | :x:
 Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | :x: | :x:
 Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | EOD | :x: | :x:
