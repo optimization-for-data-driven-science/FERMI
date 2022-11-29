@@ -8,15 +8,14 @@ This repository presents the implementation of Fair Empirical Risk Minimization 
 where the first term represents the population risk (accuracy) and the second term is a regularizer promoting exponential Rényi mutual information (ERMI) between the sensitive attribute(s) and predictions. Note that ERMI is a stronger notion of fairness compared to existing notions of fairness such as mutual information [Kamishima et al., 2011, Rezaei et al., 2020, Steinberget al., 2020, Zhang et al., 2018, Cho et al., 2020a], Pearson correlation [Zafar et al., 2017], false positive/negative rates[Bechavod and Ligett, 2017], Hilbert Schmidt independence criterion (HSIC) [Pérez-Suay et al., 2017], and Rényicorrelation [Baharlouei et al., 2020, Grari et al., 2020, 2019], in the sense that it upper bounds all aforementioned notions. Thus, minimizing ERMI guarantees the fairness of model under those notions. In the following table we compare FERMI with several state-of-the-art approaches in the literature. Note that the abbrevations NB, Cont., Stoch., DP, EOD, MI and RC stand for Non-binary, Continuous, Stochastic, Dempographic Parity, Equalized Odds, Mutual Information, and Rényi Correlation respectively. 
 
 
-**Reference** | **NB Target** | **NB Attribute** | **NB both exp.** | **Violation Notion** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
+**Reference** | **NB Target** | **NB Attribute** | **NB Code** | **Beyond Logistic** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
 :-: | :-: | :-: | :-: | :-: | :-: | :-:
-Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  DP, EOD, MI, RC, ERMI | :heavy_check_mark: | O(ε<sup>-4</sup>) (Stoch)
-Batch FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | DP, EOD, MI, RC, ERMI | :x: | O(ε<sup>-4</sup>) (Batch)
-Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | DP, EOD, MI | :heavy_check_mark: | :x:
-Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | DP, EOD | biased | :x:
-Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | DP, EOD, RC | :x: | O(ε<sup>-4</sup>) (Batch)
-Rezaei et al. [2020] | :x: |  :x: | :x: | DP, EOD | :x: | :x:
-Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | DP | :x: | :x:
+Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark: | O(ε<sup>-4</sup>)
+Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x:
+Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | biased | :x:
+Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :heavy_check_mark:
+Rezaei et al. [2020] | :x: |  :x: | :x: | :x: | :x: | :x:
+Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | :x: | :x:
 Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | EOD | :x: | :x:
 Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | DP, EOD | biased | :x:
 
