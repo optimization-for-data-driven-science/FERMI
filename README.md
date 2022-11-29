@@ -56,6 +56,24 @@ FERMIBinary.FERMI_Logistic_Regression(fermi_instance)
 
 The above code updates the parameters of a logistic regression model via stochastic gradient descent algorithm. FERMI_Logistic_Regression has multiple parameters including batch_size (default=64), initial epochs (default = 300, in this phase we learn the model without the fairness regularizer), epochs (default=1000, total number of epochs), etc. 
 
+### Fair Classification in the Presence of Missing Sensitive Attributes (Adult Dataset)
+If the sensitive attributes are not fully available, FERMI still provides an accuracy-bias tradeoff without removing the data entries containing missing values.
+
+```
+from FERMI import AdultDataset
+from FERMI import FERMIBinary
+
+AdultDataset.download_data()
+X_train, S_train, Y_train = AdultDataset.read_binary_adult(mode='train')
+X_test, S_test, Y_test = AdultDataset.read_binary_adult(mode='test')
+
+
+fermi_instance = FERMIBinary.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_test)
+FERMIBinary.FERMI_Logistic_Regression(fermi_instance, **is_missing=true**)
+```
+
+To use FERMI on other datasets, please create X_train, X_test, S_train, S_test, Y_train, and Y_test variables and use the code above instead of Adult dataset.
+
 ## Non-Binary Fair Classification (Adult Dataset)
 To run the code for a classification problem with non-binary sensitive attribute on the Adult dataset, run the following commands:
 
@@ -80,3 +98,8 @@ The implementation of Algorithm 1 in [paper](https://arxiv.org/abs/2102.12586), 
 python NeuralNetworkMnist/code_cm.py 
 ```
 
+
+## Fair Toxic Comment Classification
+We apply FERMI to the Toxic Comment Classification dataset where the underlying task is to predict whether a given published comment in social media is toxic. The sensitive attribute is religion that is binarized into two groups: Christians in one group; Muslims and Jews in the other group. Training a
+neural network without considering fairness leads to higher false positive rate for the Jew-Muslim group. FERMI reduces the false positive rate gap between two
+religious groups. Please see the notebook Toxic_Comment.ipynb notebook for the implementation.
