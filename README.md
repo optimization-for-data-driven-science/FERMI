@@ -5,21 +5,22 @@ This repository presents the implementation of Fair Empirical Risk Minimization 
 <img src="General_Framework.png" width="750" align='center'>
 </div>
 
-where the first term represents the population risk (accuracy) and the second term is a regularizer promoting exponential Rényi mutual information (ERMI) between the sensitive attribute(s) and predictions. Note that ERMI is a stronger notion of fairness compared to existing notions of fairness such as mutual information [Kamishima et al., 2011, Rezaei et al., 2020, Steinberget al., 2020, Zhang et al., 2018, Cho et al., 2020a], Pearson correlation [Zafar et al., 2017], false positive/negative rates[Bechavod and Ligett, 2017], Hilbert Schmidt independence criterion (HSIC) [Pérez-Suay et al., 2017], and Rényi correlation [Baharlouei et al., 2020, Grari et al., 2020, 2019], in the sense that it upper bounds all aforementioned notions. Thus, minimizing ERMI guarantees the fairness of model under those notions. In the following table we compare FERMI with several state-of-the-art approaches in the literature. Note that the abbrevations NB and Stoch.stand for Non-binary and Stochastic respectively. 
+where the first term represents the population risk (accuracy) and the second term is a regularizer promoting exponential Rényi mutual information (ERMI) between the sensitive attribute(s) and predictions. Note that ERMI is a stronger notion of fairness compared to existing notions of fairness such as mutual information [Kamishima et al., 2011, Rezaei et al., 2020, Steinberget al., 2020, Zhang et al., 2018, Cho et al., 2020a], Pearson correlation [Zafar et al., 2017], false positive/negative rates[Bechavod and Ligett, 2017], Hilbert Schmidt independence criterion (HSIC) [Pérez-Suay et al., 2017], and Rényi correlation [Baharlouei et al., 2020, Grari et al., 2020, 2019], in the sense that it upper bounds all aforementioned notions. Thus, minimizing ERMI guarantees the fairness of model under those notions. In the following table we compare FERMI with several state-of-the-art approaches in the literature. Note that the abbrevations NB, Stoch, and RFI stand for Non-binary, Stochastic, and Rényi Fair Inference (Baharlouei et al. [2020]) respectively. 
 
 
 **Reference** | **NB Target** | **NB Attribute** | **NB Code** | **Beyond Logistic** | **Unbiased Stoch. Alg** | **Convergence Guarantee**
 :-: | :-: | :-: | :-: | :-: | :-: | :-:
-Sotchastic FERMI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark: | O(ε<sup>-4</sup>) (Stochastic)
+**FERMI** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: | :heavy_check_mark: | O(ε<sup>-4</sup>) (Stochastic)
 Cho et al. [2020a] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x:
-Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | biased | :x:
-Baharlouei et al. [2020] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | O(ε<sup>-4</sup>) (Batch)
+Cho et al. [2020b] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x:
+RFI | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | O(ε<sup>-4</sup>) (Full Batch)
 Rezaei et al. [2020] | :x: |  :x: | :x: | :x: | :x: | :x:
 Jiang et al. [2020] | :x: | :heavy_check_mark: | :x: | :x: | :x: | :x:
 Mary et al. [2019] | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: 
 Prost et al. [2019] | :x: |  :x: | :x: | :heavy_check_mark: | :x: | :x:
-Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | EOD | :x: | :x:
-Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | DP, EOD | biased | :x:
+Donini et al. [2018] | :x: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x:
+Zhang et al. [2018] | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x:
+Agarwal et al. [2018] | :x: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | O(ε<sup>-4</sup>) (Full Batch)
 
 
 
