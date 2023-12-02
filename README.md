@@ -1,6 +1,6 @@
-## Note: Please install the package via PIP to have access to the latest code!
 
 ## A Stochastic Optimization Framework for Fair Risk Minimization
+**A small note first: Please install the package via pip in order to use it!**
 This repository presents the implementation of Fair Empirical Risk Minimization via Exponential Rényi Mutual Information (FERMI) proposed in [A Stochastic Optimization Framework for Fair Risk Minimization](https://arxiv.org/abs/2102.12586) paper. FERMI provides the first **stochastic** algorithm with theoretical convergence guarantees to optimal points (tradeoff between accuracy and fairness) for promoting fairness in classification tasks. To balance accuracy and fairness, our framework minimizes the following objective function:
 
 <div align='center'> 
