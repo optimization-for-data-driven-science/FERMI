@@ -43,7 +43,7 @@ pip install FERMI-ODDS
 ```
 
 ## Binary Classification with Binary Sensitive Attribute (Adult Dataset)
-To run the code for a binary classification problem with a binary sensitive attribute on the Adult dataset, run the following commands:
+To run the code for a binary classification problem with a binary-sensitive attribute on the Adult dataset, run the following commands:
 
 ```
 from FERMI import AdultDataset
@@ -58,7 +58,7 @@ fermi_instance = FERMIBinary.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_
 FERMIBinary.FERMI_Logistic_Regression(fermi_instance)
 ```
 
-The above code updates the parameters of a logistic regression model via stochastic gradient descent algorithm. FERMI_Logistic_Regression has multiple parameters including batch_size (default=64), initial epochs (default = 300, in this phase we learn the model without the fairness regularizer), epochs (default=1000, total number of epochs), etc. 
+The above code updates the parameters of a logistic regression model via the stochastic gradient descent algorithm. FERMI_Logistic_Regression has multiple parameters, including batch_size (default=64), initial epochs (default = 300, in this phase, we learn the model without the fairness regularizer), epochs (default=1000, total number of epochs), etc. We show how we can reproduce the results for the Adult dataset for different lambda values and batch sizes. The step size should be tuned for the best possible results depending on lambda and the batch size.   
 
 ### Fair Classification in the Presence of Missing Sensitive Attributes (Adult Dataset)
 If the sensitive attributes are not fully available, FERMI still provides an accuracy-bias tradeoff without removing the data entries containing missing values.
@@ -76,10 +76,10 @@ fermi_instance = FERMIBinary.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_
 FERMIBinary.FERMI_Logistic_Regression(fermi_instance, **is_missing=true**)
 ```
 
-To use FERMI on other datasets, please create X_train, X_test, S_train, S_test, Y_train, and Y_test variables and use the code above instead of Adult dataset.
+To use FERMI on other datasets, please create X_train, X_test, S_train, S_test, Y_train, and Y_test variables and use the code above instead of the Adult dataset.
 
 ## Non-Binary Fair Classification (Adult Dataset)
-To run the code for a classification problem with non-binary sensitive attribute on the Adult dataset, run the following commands:
+To run the code for a classification problem with non-binary sensitive attributes on the Adult dataset, run the following commands:
 
 ```
 from FERMI import AdultDataset
@@ -104,6 +104,6 @@ python NeuralNetworkMnist/code_cm.py
 
 
 ## Fair Toxic Comment Classification
-We apply FERMI to the Toxic Comment Classification dataset where the underlying task is to predict whether a given published comment in social media is toxic. The sensitive attribute is religion that is binarized into two groups: Christians in one group; Muslims and Jews in the other group. Training a
-neural network without considering fairness leads to higher false positive rate for the Jew-Muslim group. FERMI reduces the false positive rate gap between two
+We apply FERMI to the Toxic Comment Classification dataset, where the underlying task is to predict whether a given published comment in social media is toxic. The sensitive attribute is religion that is binarized into two groups: Christians in one group and Muslims and Jews in the other group. Training a
+neural network without considering fairness leads to a higher false positive rate for the Jew-Muslim group. FERMI reduces the false positive rate gap between two
 religious groups. Please see the notebook Toxic_Comment.ipynb notebook for the implementation.
