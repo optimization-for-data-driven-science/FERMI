@@ -73,7 +73,7 @@ X_test, S_test, Y_test = AdultDataset.read_binary_adult(mode='test')
 
 
 fermi_instance = FERMIBinary.FERMI(X_train, X_test, Y_train, Y_test, S_train, S_test)
-FERMIBinary.FERMI_Logistic_Regression(fermi_instance, **is_missing=true**)
+FERMIBinary.FERMI_Logistic_Regression(fermi_instance, is_missing=true)
 ```
 
 To use FERMI on other datasets, please create X_train, X_test, S_train, S_test, Y_train, and Y_test variables and use the code above instead of the Adult dataset.
